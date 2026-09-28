@@ -1,11 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User card</title>
+    <link rel="stylesheet" href="./assets/style/index.css" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
+  </head>
+
+  <body>
+    <main class="cards-container">
+      <article class="user-card-contaiter">
+        <section class="main-user-card">
+          <div class="social-containet">
+            <p class="hash-tag">New York City, NY</p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://thumbs.dreamstime.com/b/margot-robbie-los-angeles-ca-january-th-annual-critics-choice-awards-barker-hangar-santa-monica-airport-45536898.jpg?w=450"
+              alt="card photo"
+            />
+          </div>
+          <div class="user-name">
+            <h1>Margot Robbie</h1>
+          </div>
+          <div class="user-info">
+            <p>
+              Margot Robbie was born in Dalby, Queensland, Australia and raised
+              on the Good Coast.
+            </p>
+          </div>
+          <button type="button" class="follow-btn">Follow</button>
+        </section>
+        <section class="footer-user-card">
+          <!-- не получилось подключить иконки -->
+          <div class="posts info-item">
+            <div class="icon"><i class="fa fa-paper-plane"></i></div>
+            <div class="stats-block">
+              <div class="name">Posts</div>
+              <div class="count">635</div>
+            </div>
+          </div>
+          <div class="favorites info-item">
+            <div class="icon"><i class="fa fa-envelope"></i></div>
+            <div class="stats-block">
+              <div class="name">Favorites</div>
+              <div class="count">3,472</div>
+            </div>
+          </div>
+          <div class="messages info-item">
+            <div class="icon"><i class="fa fa-bars"></i></div>
+            <div class="stats-block">
+              <div class="name">Messages</div>
+              <div class="count">1,293</div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>
