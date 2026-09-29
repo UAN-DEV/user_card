@@ -34,7 +34,7 @@
 }
 
 .main-user-card {
-  padding: 10px;
+  padding: 35px 20px;
   height: calc(var(--height-card) - var(--height-footor));
   display: flex;
   flex-direction: column;
@@ -59,7 +59,6 @@
 }
 
 .img-container {
-  margin-top: -10px;
   width: var(--size-image);
   height: var(--size-image);
   border: var(--width-border-image) solid var(--color-border-image);
@@ -73,16 +72,14 @@
   width: 155%;
 }
 
-.user-name {
-  margin-top: -40px;
-}
 .user-name > h2 {
+  margin-block-start: 20px;
+  margin-block-end: 20px;
   font-size: var(--font-size-1);
   font-weight: normal;
 }
 .user-info {
   width: 70%;
-  margin-top: -50px;
   text-align: center;
   font-size: var(--font-size-3);
   opacity: 0.7;
@@ -93,7 +90,7 @@
 }
 
 .follow-btn {
-  margin-top: 40px;
+  margin-top: auto;
   width: 240px;
   height: 90px;
   padding: 10px 20px;
