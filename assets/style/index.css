@@ -1,6 +1,6 @@
 :root {
-  --width-card: 675px;
-  --height-card: 925px;
+  --width-card: 670px;
+  --height-card: 920px;
   --width-border-image: 20px;
   --height-footor: 130px;
   --size-image: 380px;
@@ -14,7 +14,11 @@
   --color-bg-footer: #1f354c;
   --color-icons-footer: #b87da1;
   --color-nomber-footer: #b5c2cf;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .user-card-contaiter {
@@ -23,38 +27,45 @@
   border: 5px solid var(--color-bg-footer);
   border-radius: var(--rad-card);
   margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  * {
-    box-sizing: border-box;
-  }
-}
-
-.main-user-card {
   font-size: var(--font-size-3);
   color: var(--color-bg-footer);
   font-weight: bold;
+  overflow: hidden;
+}
 
-  * {
-    margin: auto;
-  }
+.main-user-card {
+  padding: 10px;
+  height: calc(var(--height-card) - var(--height-footor));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
   & > * {
     width: max-content;
   }
 }
 
 .social-containet {
-  margin-top: 30px;
-  opacity: 0.7;
+  position: relative;
+  opacity: 0.5;
 
-  .hash-tag::before {
-    content: "@";
+  .social-icon {
+    position: absolute;
+    top: -5px;
+    width: var(--font-size-2);
+    height: var(--font-size-2);
+    border: 1px solid var(--color-bg-footer);
+    border-radius: 50%;
+  }
+
+  & :last-child {
+    margin-left: 5px;
   }
 }
 
 .img-container {
-  margin-top: 15px;
+  margin-top: -10px;
   width: var(--size-image);
   height: var(--size-image);
   border: var(--width-border-image) solid var(--color-border-image);
@@ -70,38 +81,27 @@
 }
 
 .user-name {
-  margin-top: 30px;
+  margin-top: -40px;
 
-  h1 {
-    margin-block-start: 0;
-    margin-block-end: 0;
+  h2 {
     font-size: var(--font-size-1);
     font-weight: normal;
-  }
-  p {
-    margin-block-start: 0;
-    margin-block-end: 15px;
-    opacity: 0.5;
-    letter-spacing: 5px;
   }
 }
 .user-info {
   width: 70%;
-  margin-top: 35px;
-
-  p {
-    text-align: center;
-    font-size: var(--font-size-3);
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+  margin-top: -50px;
+  text-align: center;
+  font-size: var(--font-size-3);
+  opacity: 0.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .follow-btn {
-  margin-top: 65px;
-  display: block;
+  margin-top: 40px;
   width: 240px;
   height: 90px;
   padding: 10px 20px;
@@ -117,7 +117,6 @@
 
 .footer-user-card {
   display: flex;
-  align-items: center;
   height: var(--height-footor);
   background-color: var(--color-bg-footer);
   font-size: var(--font-size-3);
@@ -136,10 +135,8 @@
 }
 
 .icon {
-  width: var(--size-social-icons);
-  height: var(--size-social-icons);
-  /* border: 2px solid aliceblue; */
-  border: 2px solid var(--color-icons-footer);
+  color: var(--color-icons-footer);
+  font-size: var(--size-social-icons);
 }
 .stats-block {
   padding: 15px;
